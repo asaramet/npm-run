@@ -14,10 +14,8 @@ HEALTHCHECK CMD curl -fs http://localhost:$PORT || exit 1
 
 WORKDIR /usr/src/app
 
-# link stdout and stderr to /var/log files
 RUN ln -sf /dev/stdout /var/log/node_stdout.log && \
     ln -sf /dev/stderr /var/log/node_stderr.log && \
-    # install dependencies
     npm install && npm cache clean --force
 
 ENTRYPOINT npm start
