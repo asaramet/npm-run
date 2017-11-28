@@ -19,7 +19,5 @@ RUN ln -sf /dev/stdout /var/log/node_stdout.log && \
     ln -sf /dev/stderr /var/log/node_stderr.log
 
 # Run npm installl
-RUN npm install && npm cache clean --force
-
-ENTRYPOINT npm start
+ENTRYPOINT npm install && npm cache clean --force && npm start
 #CMD ["node", "./bin/www"]
