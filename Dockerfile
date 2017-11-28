@@ -20,5 +20,5 @@ RUN ln -sf /dev/stdout /var/log/node_stdout.log && \
     # install dependencies
     npm install && npm cache clean --force
 
-#ENTRYPOINT npm start
-CMD ["node", "./bin/www"]
+ENTRYPOINT npm start
+#CMD ["node", "./bin/www"]
