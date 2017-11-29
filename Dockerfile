@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:9-stretch
 
 # set node environmet to production
 ARG NODE_ENV=production
